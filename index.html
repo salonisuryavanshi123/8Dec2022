@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Array</title>
+        <link href="./css/style.css">
+
+
+        <style>
+
+        </style>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1 class="n1h1"></h1>
+        <p class="saloni"></p>
+        <hr />
+
+        <h1 data-n2h2="n2h2"></h1>
+        <p data-n2p2="n2p2"></p>
+        <hr />
+
+        <h1 class="n3h3"></h1>
+        <p class="n3p3"></p>
+        <hr />
+
+        <h1 class="n4h4"></h1>
+        <p class="n4p4"></p>
+        <hr />
+
+        <h1 class="n5h5"></h1>
+        <p class="n5p5"></p>
+        
+        <script src="./js/script.js"></script>
+        <script>
+            let _allnews = [
+                {
+                    //Property:Value
+                    n1h1:'BMC to start rebuilding 135-year-old Malabar Hill reservoir next month',
+                    n1p1:'The water supply in south Mumbai will be augmented as the Brihanmumbai Municipal Corporation (BMC) is all set to start reconstructing the 135-year-old Malabar Hill reservoir in January'
+                },
+
+                {
+                    //Property:Value
+                   n2h2:'Dwayne Johnson reacts to reports calling Black Adam flop, shares films profit margins on Twitter.',
+                   n2p2:`On Wednesday evening, Dwayne took to Twitter to share a news article about Black Adam’s profitability. Alongside, he wrote, “Waited to confirm with financiers before I shared this excellent #BlackAdam news - our film will PROFIT between $52M-$72M. Fact.” The accompanying article by Deadline was an explainer on how the film has been profitable.`
+                },
+                {
+                    //Property:Value
+                    n3h3:'President Droupadi Murmu begins two-day Uttarakhand visit',
+                    n3p3:'On Friday, she will address the valedictory session of the 97th Common Foundation Course at the Lal Bahadur Shastri National Academy of Administration (LBSNAA) in Mussoorie. President Murmu will also attend the annual convocation of Doon University in Dehradun.'
+                },
+                {
+                    //Property:Value
+                    n4h4:'Aries Horoscope Today, December 8, 2022: Uncomfortable day ahead',
+                    n4p4:'Dear Aries, it may be a day when your overall financial situation may be stable. Daily Astrological Prediction says, today, you may finalize plans to buy a fancy car or an expensive gadget for your personal use. Your family life may seem to have all the blessings from almighty. Your elders may support you financially in a new venture. You may feel peace deep inside your heart. At work, your focus and determination may help you get a new client onboard. You may need to be little cautious with regard to health as the day may bring in little discomfort, which may ease very soon.'
+                },
+                {
+                    n5h5:'Experts on can breathing in smog be a reason for cancers or lead to infertility',
+                    n5p5:'She highlighted, “Pollutants in toxic air that can be cancerous are arsenic, asbestos, benzene, beryllium, cadmium, coal tar, silica, ethylene oxide, wood dust, trichloroethylene, thorium, Nike compounds, indoor household combustion of tar, coal particulate, vinyl chloride, fumes of chemicals. These are usually found in industrial area as well as metro cities (due to coal, crude oil, petrol, diesel use). Burning plastic and other waste material increase aromatic carbon compound in air. These is one of the leading causes of cancer. Smog is air with dense heavy air pollutants particulates and is hazardous as can lead to chronic bronchitis, COPD, asthma, allergic rhinitis also lung cancer most commonly adenocarcinoma.”'
+                },
+
+                
+            ]; //Array containing objects i.e Array of object
+
+            //arrayName[indexNumber]
+
+            //Array index Number always start with 0
+            //I want to follow DRY principle
+            const x = document.querySelector('h1.n1h1')
+            x.innerHTML = _allnews[0].n1h1; //Technique 1
+            x.style.color = "green";
+            document.querySelector('p.saloni').innerHTML = _allnews[0]["n1p1"];  //Technique 2
+
+            let n2exp1 = 'n2h2';
+            document.querySelector('h1[data-n2h2]').innerHTML = _allnews[1][n2exp1]      //Technique 3
+            document.querySelector('h1[data-n2h2]').style.color = "blue";
+            document.querySelector('p[data-n2p2="n2p2"]').innerHTML = _allnews[1].n2p2;
+
+            document.querySelector('h1.n3h3').innerHTML = _allnews[2].n3h3;
+            document.querySelector('h1.n3h3').style.color = "red";
+            document.querySelector('p.n3p3').innerHTML = _allnews[2]["n3p3"];
+
+            document.querySelector('h1.n4h4').innerHTML = _allnews[3].n4h4;
+            document.querySelector('h1.n4h4').style.color = "orange";
+            document.querySelector('p.n4p4').innerHTML = _allnews[3]["n4p4"];
+
+            document.querySelector('h1.n5h5').innerHTML = _allnews[4].n5h5;
+            document.querySelector('h1.n5h5').style.color = "brown";
+            document.querySelector('p.n5p5').innerHTML = _allnews[4]["n5p5"];
+
+
+
+
+            
+        </script>
+    </body>
+</html>
